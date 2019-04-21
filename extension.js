@@ -1,8 +1,9 @@
 const vscode = require("vscode");
-
+const examineCode = require("./examineCode");
 /**
  * @param {vscode.ExtensionContext} context
  */
+
 function activate(context) {
   console.log("Activating Extension!");
 
@@ -12,10 +13,10 @@ function activate(context) {
   let disposable = vscode.commands.registerCommand(
     "extension.divCheck",
     function() {
-      vscode.window.showInformationMessage("JOOOOOOO BAAAL!");
+      examineCode();
+      // vscode.window.showInformationMessage("JOOOOOOO BAAAL!");
     }
   );
-
   context.subscriptions.push(disposable);
 }
 exports.activate = activate;
