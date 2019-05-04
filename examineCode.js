@@ -8,8 +8,16 @@ function examineCode() {
   }
   const doc = editor.document;
   const text = doc.getText();
-  let wordArray = text.split(" ");
-  console.log(wordArray);
+  const openingDiv = /<div/g;
+  const closingDiv = /\/div>/g;
+  // let singleDiv = /\/>/g;
+
+  let openingDivArray = [];
+
+  openingDivArray.push(...openingDiv.exec(text));
+  openingDivArray.push(...closingDiv.exec(text));
+
+  console.log(openingDivArray);
 }
 
 module.exports = examineCode;
