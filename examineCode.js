@@ -9,11 +9,20 @@ function examineCode() {
   const doc = editor.document;
   const text = doc.getText();
   const fullText = text.split("\n");
-  const openingDiv = /<div/g;
-  const closingDiv = /\/div>/g;
-  // let singleDiv = /\/>/g;
+  const openingDiv = /<div/;
+  const closingDiv = /\/div>/;
 
-  let openingDivArray = [];
+  let divCount = 0;
+
+  for (let word of fullText) {
+    if (openingDiv.test(word) == true) {
+      divCount++;
+    }
+    if (closingDiv.test(word) == true) {
+      divCount++;
+    }
+  }
+  let checkDiv = divCount % 2 === 0 ? true : false;
 }
 
 module.exports = examineCode;
