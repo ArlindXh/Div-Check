@@ -28,6 +28,7 @@ function examineCode() {
     : null;
 
   // TODO : checking divs is now working, gotta add support for end-line closing divs (<div />)
+  // TODO : Add support for codeExam to happend on save rather than invoking it from Command Palette
 }
 
 module.exports = examineCode;
