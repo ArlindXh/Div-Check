@@ -29,6 +29,7 @@ function examineCode() {
 
   // TODO : checking divs is now working, gotta add support for end-line closing divs (<div />)
   // TODO : Add support for codeExam to happend on save rather than invoking it from Command Palette
+  // TODO : Show at which line should the missing closing div be placed
 }
 
 module.exports = examineCode;
